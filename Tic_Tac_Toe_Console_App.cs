@@ -2,7 +2,7 @@
 
 namespace Tic_Tac_Toe_Console_App
 {
-    class Program
+    class Tic_Tac_Toe_Console_App
     {
         private static int threeInARow(char[,] game_field)
         {
