@@ -278,6 +278,7 @@ namespace Tic_Tac_Toe_Form_App
                     lblGameState.Text = "Spiel läuft. O an der Reihe...";
                     break;
             }
+            isRemis();
         }
 
         private void cmdSetX_Click(object sender, EventArgs e)
@@ -446,6 +447,16 @@ namespace Tic_Tac_Toe_Form_App
                         cmdSetO.Enabled = false;
                         lblGameState.Text = "Spiel läuft. X an der Reihe...";
                     break;
+            }
+            isRemis();
+        }
+        private void isRemis()
+        {
+            if(label1.Text != "1" && label2.Text != "2" && label3.Text != "3" && label4.Text != "4" && label5.Text != "5" && label6.Text != "7" && label7.Text != "8" && label8.Text != "6" && label9.Text != "9")
+            {
+                lblGameState.Text = "Spiel zu Ende. Unentschieden.";
+                cmdSetO.Enabled = false;
+                cmdSetX.Enabled = false;
             }
         }
     }
